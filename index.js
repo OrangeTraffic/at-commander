@@ -345,6 +345,10 @@ Modem.prototype.getCurrentCommand = function()
 
 Modem.prototype.abortCurrentCommand = function()
 {
+    const command = this.currentCommand;
+    if (command instanceof Command){
+        command.state = CommandStateFinished;
+    }
     this.currentCommand = false;
     this._clearBufferTimeout();
     this._checkPendingCommands();
