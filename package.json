@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/smart-home-technology/at-commander#readme",
   "dependencies": {
-    "serialport": "latest",
-    "promise": "latest"
+    "serialport": "^4.0.7",
+    "promise": "^7.3.1"
   }
 }
